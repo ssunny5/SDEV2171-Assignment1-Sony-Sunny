@@ -81,7 +81,7 @@ export default function SleepEntryScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#f5f7fb",
+        backgroundColor: "#F7F8F1",
         padding: 24,
     },
 
@@ -118,11 +118,11 @@ const styles = StyleSheet.create({
 
     sleepQualityButton: {
         flex: 1,
-        backgroundColor: "#ffffff",
+        backgroundColor: "#EEF2E5",
         paddingVertical: 12,
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: "#d1d5db",
+        borderColor: "#D9E2CC",
         alignItems: "center",
     },
 
