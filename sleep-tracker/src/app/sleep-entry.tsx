@@ -1,9 +1,12 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import FormField from "@/components/FormField";
 
 export default function SleepEntryScreen() {
     const previousNight = new Date();
+
+    const [sleepQuality, setSleepQuality] = useState("Good");
 
     previousNight.setDate(previousNight.getDate() - 1);
 
@@ -41,27 +44,34 @@ export default function SleepEntryScreen() {
                 <Text style={styles.label}>Sleep Quality</Text>
 
                 <View style={styles.sleepQualityContainer}>
-                    <Pressable style={styles.sleepQualityButton}>
-                        <Text style={styles.sleepQualityButtonText}>Poor</Text>
-                    </Pressable>
-
-                    <Pressable style={styles.sleepQualityButton}>
-                        <Text style={styles.sleepQualityButtonText}>Average</Text>
-                    </Pressable>
-
-                    <Pressable style={styles.selectedQualityButton}>
-                        <Text style={styles.selectedQualityButtonText}>Good</Text>
-                    </Pressable>
-
-                    <Pressable style={styles.sleepQualityButton}>
-                        <Text style={styles.sleepQualityButtonText}>Excellent</Text>
-                    </Pressable>
-
-
+                    {["Poor", "Fair", "Good", "Great"].map((quality) => (
+                        <Pressable
+                            key={quality}
+                            onPress={() => setSleepQuality(quality)}
+                            style={[
+                                styles.sleepQualityButton,
+                                sleepQuality === quality && styles.selectedSleepQualityButton,
+                            ]}
+                        >
+                            <Text
+                                style={[
+                                    styles.sleepQualityButtonText,
+                                    sleepQuality === quality && styles.selectedSleepQualityButtonText,
+                                ]}
+                            >
+                                {quality}
+                            </Text>
+                        </Pressable>
+                    ))}
                 </View>
 
-                <Pressable style={styles.saveButton}>
-                    <Text style={styles.saveButtonText}>Save</Text>
+                <Pressable
+                    style={({ pressed }) => [
+                        styles.saveButton,
+                        pressed && styles.saveButtonPressed,
+                    ]}
+                >
+                    <Text style={styles.saveButtonText}>Save Sleep Log</Text>
                 </Pressable>
             </ScrollView>
         </SafeAreaView>
@@ -116,7 +126,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
 
-    selectedQualityButton: {
+    selectedSleepQualityButton: {
         flex: 1,
         backgroundColor: "#6366f1",
         paddingVertical: 12,
@@ -129,7 +139,7 @@ const styles = StyleSheet.create({
         fontWeight: "600",
     },
 
-    selectedQualityButtonText: {
+    selectedSleepQualityButtonText: {
         color: "#ffffff",
         fontWeight: "700",
     },
@@ -142,10 +152,17 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
 
+
     saveButtonText: {
         color: "#ffffff",
         fontSize: 16,
         fontWeight: "700",
+    },
+
+
+    saveButtonPressed: {
+        opacity: 0.8,
+        transform: [{ scale: 0.98 }],
     },
 });
 
