@@ -20,7 +20,7 @@ export default function StatCard({
 const styles = StyleSheet.create({
   card: {
     width: "48%",
-    backgroundColor: "#ffffff",
+    backgroundColor: "#166534",
     paddingVertical: 28,
     paddingHorizontal: 12,
     borderRadius: 16,
@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
   value: {
     fontSize: 23,
     fontWeight: "800",
-    color: "#6366f1",
+    color: "#FACC15",
     marginBottom: 8,
   },
 
   label: {
     fontSize: 13,
-    color: "#6b7280",
+    color: "#ffff",
     textAlign: "center",
   },
 });
