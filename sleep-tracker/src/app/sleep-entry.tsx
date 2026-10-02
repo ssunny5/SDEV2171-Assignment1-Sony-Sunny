@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
 
     selectedSleepQualityButton: {
         flex: 1,
-        backgroundColor: "#6366f1",
+        backgroundColor: "#166534",
         paddingVertical: 12,
         borderRadius: 10,
         alignItems: "center",
@@ -140,13 +140,13 @@ const styles = StyleSheet.create({
     },
 
     selectedSleepQualityButtonText: {
-        color: "#ffffff",
+        color: "#FACC15",
         fontWeight: "700",
     },
 
 
     saveButton: {
-        backgroundColor: "#6366f1",
+        backgroundColor: "#166534",
         paddingVertical: 16,
         borderRadius: 12,
         alignItems: "center",
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
 
 
     saveButtonText: {
-        color: "#ffffff",
+        color: "#FACC15",
         fontSize: 16,
         fontWeight: "700",
     },
