@@ -25,9 +25,9 @@ export default function NavigationCard({
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: "#fff",
+        backgroundColor: "#166534",
         padding: 10,
-        borderRadius: 8,
+        borderRadius: 14,
         marginBottom: 8,
         flexDirection: "row",
         justifyContent: "space-between",
@@ -38,13 +38,13 @@ const styles = StyleSheet.create({
     title:{
         fontSize: 18,
         fontWeight: "bold",
-        color: "#1f2937",
+        color: "#FACC15",
         marginBottom: 6,
     },
 
     description: {
         fontSize: 14,
-        color: "#4b5563",
+        color: "#ffff",
     },
 
     arrow: {
