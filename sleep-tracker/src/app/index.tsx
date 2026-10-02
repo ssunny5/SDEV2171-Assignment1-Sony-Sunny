@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   },
 
   summary: {
-    backgroundColor: "#6366f1",
+    backgroundColor: "#166534",
     padding: 24,
     borderRadius: 20,
     marginBottom: 32,
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
 
   summaryValue: {
-    color: "#ffffff",
+    color: "#FACC15",
     fontSize: 34,
     fontWeight: "800",
   },
