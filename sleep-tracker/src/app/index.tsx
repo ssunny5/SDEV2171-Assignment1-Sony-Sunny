@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
+import { Link } from "expo-router";
 
 import NavigationCard from "@/components/NavigationCard";
 
@@ -28,7 +29,13 @@ export default function HomeScreen() {
       <NavigationCard
         title="Log Sleep"
         description="Record last night's sleep information"
-        onPress={() => router.push("/sleep-entry")}
+        onPress={() => router.push("/sleep-list")}
+      />
+
+      <NavigationCard
+        title="View Sleep History"
+        description="View your prevoius sleep records"
+        onPress={() => router.push("/sleep-statistics")}
       />
 
       <NavigationCard
